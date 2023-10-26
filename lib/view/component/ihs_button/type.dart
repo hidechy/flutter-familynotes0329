@@ -1,0 +1,4 @@
+enum IHSButtonType {
+  primary,
+  gray,
+}

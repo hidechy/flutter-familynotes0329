@@ -1,0 +1,111 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.appdistribution'
+
+def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def gitBranch = (System.getenv("CIRCLE_BRANCH") != null) ? System.getenv("CIRCLE_BRANCH") :
+        'git rev-parse --abbrev-ref HEAD'.execute([], project.rootDir).text.trim()
+def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm'Z'", TimeZone.getTimeZone("JST"))
+
+// ---- dart-defineの読み込み ----
+def dartDefines = []
+if (project.hasProperty('dart-defines')) {
+    dartDefines = project.property('dart-defines')
+            .split(',')
+            .collectEntries { entry ->
+                def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+                [(pair.first()): pair.last()]
+            }
+}
+
+android {
+    compileSdkVersion 33
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "jp.co.wellier.suilog"
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+        def idsuffix = "${dartDefines.APP_ID_SUFFIX}"
+        if (idsuffix != 'prod') {
+            applicationIdSuffix idsuffix
+            resValue "string", "app_name", "${dartDefines.APP_NAME_PREFFIX}すいろぐ"
+        }else {
+            resValue "string", "app_name", "すいろぐ"
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias "suilog"
+            keyPassword "suilog00"
+            storePassword "suilog00"
+            storeFile file('../../keys/suilog.jks')
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            firebaseAppDistribution {
+                releaseNotes = "${gitBranch}(${gitSha}) - ${buildTime}"
+                groups = "suited"
+            }
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
+    implementation 'androidx.window:window:1.0.0'
+    implementation 'androidx.window:window-java:1.0.0'
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+}

@@ -1,0 +1,8 @@
+app_identifier("jp.co.wellier.suilog.dev") # The bundle identifier of your app
+apple_id("nisugi-kensuke@sunited.jp") # Your Apple Developer Portal username
+
+itc_team_id("125921726") # App Store Connect Team ID
+team_id("7HA4A8Y2RB") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

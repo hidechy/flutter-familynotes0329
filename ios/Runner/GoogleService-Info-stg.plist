@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1013323502986-965e7c3qk2j1agen25dci8lh0nggq0d6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1013323502986-965e7c3qk2j1agen25dci8lh0nggq0d6</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1013323502986-2iglig939m2bp0opj3k1mu3b0dhpp394.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC104ytCCSbI63NFr2YdSSUlnddRXbsOo0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1013323502986</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>jp.co.wellier.suilog.dev</string>
+	<key>PROJECT_ID</key>
+	<string>wellier-ed13b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wellier-ed13b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1013323502986:ios:15a4110f056cfd9f8b2473</string>
+</dict>
+</plist>

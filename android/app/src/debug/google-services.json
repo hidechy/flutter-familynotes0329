@@ -1,0 +1,134 @@
+{
+  "project_info": {
+    "project_number": "1013323502986",
+    "project_id": "wellier-ed13b",
+    "storage_bucket": "wellier-ed13b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013323502986:android:dcf9bd84cd9c830e8b2473",
+        "android_client_info": {
+          "package_name": "com.ihsuite.android.KOWAHealthNote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcqw2u0bVyBUFS1CMw4GkroOmz-eYspiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013323502986-shruntrto0jsuikgenr0j63fdr0gtes8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ihsuite-app.concierge"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013323502986:android:6e06500e88d972948b2473",
+        "android_client_info": {
+          "package_name": "jp.co.wellier.suilog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013323502986-2iglig939m2bp0opj3k1mu3b0dhpp394.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.co.wellier.suilog",
+            "certificate_hash": "4762196f8a0870fba8beb728183f6c5a9c843133"
+          }
+        },
+        {
+          "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcqw2u0bVyBUFS1CMw4GkroOmz-eYspiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013323502986-shruntrto0jsuikgenr0j63fdr0gtes8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ihsuite-app.concierge"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013323502986:android:d86989476cd417df8b2473",
+        "android_client_info": {
+          "package_name": "jp.co.wellier.suilog.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013323502986-3skc099tj2p7si9cgvrpjv8iqi27fo9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.co.wellier.suilog.dev",
+            "certificate_hash": "4762196f8a0870fba8beb728183f6c5a9c843133"
+          }
+        },
+        {
+          "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcqw2u0bVyBUFS1CMw4GkroOmz-eYspiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013323502986-463t91avleaiq9bqh3tvdn5iiv5n0r94.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013323502986-shruntrto0jsuikgenr0j63fdr0gtes8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ihsuite-app.concierge"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
