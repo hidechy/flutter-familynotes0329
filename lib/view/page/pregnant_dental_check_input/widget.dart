@@ -1,15 +1,15 @@
-import 'package:family_notes/extension/date_time.dart';
-import 'package:family_notes/view/component/multiline_text_field/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
+import '../../../extension/date_time.dart';
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../component/ihs_dialog/widget.dart';
+import '../../component/multiline_text_field/widget.dart';
 import '../../component/validate_date_pick_text_field/widget.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
@@ -31,12 +31,10 @@ class PregnantDentalCheckInputPage extends ConsumerStatefulWidget {
   final PregnantDentalCheckInputType inputType;
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() =>
-      _PregnantDentalCheckInputPageState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _PregnantDentalCheckInputPageState();
 }
 
-class _PregnantDentalCheckInputPageState
-    extends ConsumerState<PregnantDentalCheckInputPage> {
+class _PregnantDentalCheckInputPageState extends ConsumerState<PregnantDentalCheckInputPage> {
   final memoFocusNode = FocusNode();
 
   @override
@@ -48,8 +46,7 @@ class _PregnantDentalCheckInputPageState
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(pregnantDentalCheckInputProvider(widget.inputType));
-    final notifier =
-        ref.read(pregnantDentalCheckInputProvider(widget.inputType).notifier);
+    final notifier = ref.read(pregnantDentalCheckInputProvider(widget.inputType).notifier);
     final scrollController = ScrollController();
 
     return GradationLayout(
@@ -62,8 +59,7 @@ class _PregnantDentalCheckInputPageState
           final actions = [
             IHSUtil.setKeyboardActionsItem(memoFocusNode),
           ];
-          final isInputTypeNew =
-              widget.inputType is PregnantDentalCheckInputNew;
+          final isInputTypeNew = widget.inputType is PregnantDentalCheckInputNew;
           final _dateController = loadedState.dateController!;
           final _weekController = loadedState.weekController!;
           final memoController = loadedState.inputData.memoController!;
@@ -174,16 +170,12 @@ class _PregnantDentalCheckInputPageState
     FormControl<String> controller,
   ) {
     Color _pregnantWeekColor() {
-      return state.inputData.isAfterBirth
-          ? IHSColors.black400
-          : IHSColors.black800;
+      return state.inputData.isAfterBirth ? IHSColors.black400 : IHSColors.black800;
     }
 
     Color _afterBornColor() {
       final _week = state.inputData.week;
-      return (_week == null || _week == '')
-          ? IHSColors.black800
-          : IHSColors.black400;
+      return (_week == null || _week == '') ? IHSColors.black800 : IHSColors.black400;
     }
 
     return Row(
@@ -253,9 +245,7 @@ class _PregnantDentalCheckInputPageState
                   width: 24,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: state.inputData.isAfterBirth
-                          ? IHSColors.black800
-                          : IHSColors.black400,
+                      color: state.inputData.isAfterBirth ? IHSColors.black800 : IHSColors.black400,
                       width: state.inputData.isAfterBirth ? 2 : 1,
                     ),
                     borderRadius: BorderRadius.circular(
@@ -265,9 +255,7 @@ class _PregnantDentalCheckInputPageState
                   child: AbsorbPointer(
                     child: Checkbox(
                       activeColor: IHSColors.white,
-                      checkColor: state.inputData.isAfterBirth
-                          ? IHSColors.black800
-                          : IHSColors.white,
+                      checkColor: state.inputData.isAfterBirth ? IHSColors.black800 : IHSColors.white,
                       fillColor: MaterialStateProperty.resolveWith(
                         (states) => IHSColors.white,
                       ),
@@ -358,8 +346,7 @@ class _RegisterButtonArea extends StatelessWidget {
 }
 
 class _EditButtonArea extends StatelessWidget {
-  const _EditButtonArea(
-      {required this.form, required this.notifier, required this.state});
+  const _EditButtonArea({required this.form, required this.notifier, required this.state});
 
   final FormGroup form;
   final PregnantDentalCheckInputNotifier notifier;

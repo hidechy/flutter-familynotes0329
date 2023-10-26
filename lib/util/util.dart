@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:family_notes/view/service/navigation.dart';
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 import '../view/component/loading_indicator/widget.dart';
+import '../view/service/navigation.dart';
+import '../view/style/colors.dart';
 import '../view/style/text_style.dart';
 
 class IHSUtil {

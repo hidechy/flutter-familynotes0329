@@ -1,4 +1,4 @@
-import 'package:family_notes/gen/assets.gen.dart';
+import '../../../gen/assets.gen.dart';
 
 enum QuestionType {
   fish(id: 1, label: '魚'),

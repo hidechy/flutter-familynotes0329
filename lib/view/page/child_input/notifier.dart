@@ -1,12 +1,12 @@
-import 'package:family_notes/extension/date_time.dart';
-import 'package:family_notes/provider/user/notifier.dart';
-import 'package:family_notes/view/component/validate_text_field/type.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../extension/date_time.dart';
 import '../../../provider/signup/notifier.dart';
+import '../../../provider/user/notifier.dart';
 import '../../../type/gender.dart';
 import '../../component/validate_text_field/child_gedner_type.dart';
+import '../../component/validate_text_field/type.dart';
 import 'state.dart';
 
 /// お子さま情報の入力の状態を管理するプロバイダー

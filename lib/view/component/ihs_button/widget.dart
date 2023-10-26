@@ -1,8 +1,8 @@
-import 'package:family_notes/view/component/ihs_button/type.dart';
 import 'package:flutter/material.dart';
 
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import 'type.dart';
 
 /// IHSのボタンコンポーネント
 class IHSButton extends StatelessWidget {

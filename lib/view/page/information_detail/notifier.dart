@@ -1,7 +1,7 @@
-import 'package:family_notes/data/repository/notice.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../../../data/model/response/model.dart';
+import '../../../data/repository/notice.dart';
 import '../../../util/util.dart';
 import '../../style/texts.dart';
 import 'state.dart';

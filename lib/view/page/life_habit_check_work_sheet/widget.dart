@@ -1,18 +1,18 @@
-import 'package:family_notes/view/component/gradation_layout/widget.dart';
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/component/record_list/widget.dart';
-import 'package:family_notes/view/page/life_habit_check_work_sheet/notifier.dart';
-import 'package:family_notes/view/page/life_habit_question/widget.dart';
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../extension/date_time.dart';
 import '../../../util/page_navigator.dart';
+import '../../component/gradation_layout/widget.dart';
+import '../../component/ihs_button/type.dart';
+import '../../component/ihs_button/widget.dart';
+import '../../component/record_list/widget.dart';
+import '../../style/colors.dart';
+import '../../style/text_style.dart';
+import '../life_habit_question/widget.dart';
 import '../life_habit_question_result/type.dart';
 import '../life_habit_question_result/widget.dart';
+import 'notifier.dart';
 
 /// 生活習慣改善チェックシート画面
 class LifeHabitCheckWorkSheetPage extends ConsumerWidget {
@@ -45,8 +45,7 @@ class LifeHabitCheckWorkSheetPage extends ConsumerWidget {
                 '入力画面へ',
                 type: IHSButtonType.primary,
                 onPressed: () {
-                  PageNavigator.navigatePage(
-                      context, const LifeHabitQuestionPage());
+                  PageNavigator.navigatePage(context, const LifeHabitQuestionPage());
                 },
               ),
               if (records.isNotEmpty) ...[
@@ -63,8 +62,7 @@ class LifeHabitCheckWorkSheetPage extends ConsumerWidget {
                 const SizedBox(height: 24),
                 Flexible(
                   child: RecordListView(
-                    records:
-                        records.map((e) => Record(date: e.answerDate)).toList(),
+                    records: records.map((e) => Record(date: e.answerDate)).toList(),
                     onTap: (index, record) {
                       final answerHeaderId = records[index].answerHeaderId;
                       PageNavigator.navigatePage(

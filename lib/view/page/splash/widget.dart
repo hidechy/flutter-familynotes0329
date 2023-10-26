@@ -1,11 +1,5 @@
 import 'dart:async';
 
-import 'package:family_notes/app.dart';
-import 'package:family_notes/data/local/local_client.dart';
-import 'package:family_notes/extension/context.dart';
-import 'package:family_notes/provider/app/notifier.dart';
-import 'package:family_notes/view/component/base_layout/widget.dart';
-import 'package:family_notes/view/page/error/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -14,10 +8,16 @@ import '/gen/assets.gen.dart';
 import '/provider/user/notifier.dart';
 import '/util/util.dart';
 import '/view/style/colors.dart';
+import '../../../app.dart';
+import '../../../data/local/local_client.dart';
 import '../../../data/page/page.dart';
+import '../../../extension/context.dart';
+import '../../../provider/app/notifier.dart';
 import '../../../provider/config/notifier.dart';
 import '../../../util/page_navigator.dart';
+import '../../component/base_layout/widget.dart';
 import '../../style/constants.dart';
+import '../error/widget.dart';
 import '../root/widget.dart';
 
 ///  認証が通っている時だけ、各種バージョンのチェックを行う

@@ -1,12 +1,12 @@
-import 'package:family_notes/view/page/child_health_check_input/notifier.dart';
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../component/validate_text_field/type.dart';
 import '../../../component/validate_text_field/widget.dart';
+import '../../../style/colors.dart';
 import '../../../style/text_style.dart';
+import '../notifier.dart';
 import '../state.dart';
 
 enum DentalInputType {
@@ -46,11 +46,9 @@ class DentalInput extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final notifier = ref.watch(childHealthCheckInputProvider.notifier);
-    final _inputData = ref.watch(childHealthCheckInputProvider
-        .select((s) => s.mapOrNull(loaded: (s) => s.inputData)!));
+    final _inputData = ref.watch(childHealthCheckInputProvider.select((s) => s.mapOrNull(loaded: (s) => s.inputData)!));
 
-    final state =
-        ref.watch(childHealthCheckInputProvider) as ChildHealthCheckInputLoaded;
+    final state = ref.watch(childHealthCheckInputProvider) as ChildHealthCheckInputLoaded;
 
     final _needDentalTreatment = state.inputData.needDentalTreatment;
 
@@ -109,8 +107,7 @@ class DentalToggleButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state =
-        ref.watch(childHealthCheckInputProvider) as ChildHealthCheckInputLoaded;
+    final state = ref.watch(childHealthCheckInputProvider) as ChildHealthCheckInputLoaded;
     final notifier = ref.watch(childHealthCheckInputProvider.notifier);
     final _needDentalTreatmenta = state.inputData.needDentalTreatment;
 

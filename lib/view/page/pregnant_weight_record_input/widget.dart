@@ -1,11 +1,9 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../data/model/pregnant_weight_record_list/model.dart';
 import '../../../extension/date_time.dart';
-
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
@@ -16,6 +14,7 @@ import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/validation.dart';
 import '../../component/validate_text_field/widget.dart';
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 import '../../style/texts.dart';
 import 'notifier.dart';
@@ -32,12 +31,10 @@ class PregnantWeightRecordInputPage extends ConsumerStatefulWidget {
   final PregnantWeightRecord? record;
 
   @override
-  PregnantWeightRecordInputPageState createState() =>
-      PregnantWeightRecordInputPageState();
+  PregnantWeightRecordInputPageState createState() => PregnantWeightRecordInputPageState();
 }
 
-class PregnantWeightRecordInputPageState
-    extends ConsumerState<PregnantWeightRecordInputPage> {
+class PregnantWeightRecordInputPageState extends ConsumerState<PregnantWeightRecordInputPage> {
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(
@@ -199,7 +196,6 @@ class PregnantWeightRecordInputPageState
           onChanged: (value) {
             notifier.onChangedWeightField(value);
           },
-        
         ),
         const SizedBox(width: 8),
         Padding(

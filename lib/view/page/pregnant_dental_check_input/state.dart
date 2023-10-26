@@ -1,22 +1,20 @@
-import 'package:family_notes/data/model/pregnant_dental_check_record_detail/model.dart';
-import 'package:family_notes/view/page/pregnant_dental_check_input/status.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
+import '../../../data/model/pregnant_dental_check_record_detail/model.dart';
 import '../../../extension/string.dart';
+import 'status.dart';
 import 'type.dart';
 
 part 'state.freezed.dart';
 
 @freezed
 class PregnantDentalCheckInputState with _$PregnantDentalCheckInputState {
-  const factory PregnantDentalCheckInputState.loading() =
-      PregnantDentalCheckInputLoading;
+  const factory PregnantDentalCheckInputState.loading() = PregnantDentalCheckInputLoading;
 
   const factory PregnantDentalCheckInputState.loaded({
-    @Default(PregnantDentalCheckInputData())
-        PregnantDentalCheckInputData inputData,
+    @Default(PregnantDentalCheckInputData()) PregnantDentalCheckInputData inputData,
     FormControl<String>? dateController,
     FormControl<String>? weekController,
   }) = PregnantDentalCheckInputLoaded;
@@ -39,8 +37,7 @@ class PregnantDentalCheckInputData with _$PregnantDentalCheckInputData {
     @Default(false) bool isAfterBirth,
 
     /// 健診結果
-    @Default(PregnantDentalCheckInputListItemType.noProblem)
-        PregnantDentalCheckInputListItemType type,
+    @Default(PregnantDentalCheckInputListItemType.noProblem) PregnantDentalCheckInputListItemType type,
 
     /// メモ
     String? memo,
@@ -55,8 +52,7 @@ class PregnantDentalCheckInputData with _$PregnantDentalCheckInputData {
     final checkupDay = model.checkupDay.toDateTime(
       DateFormatType.yyyymmddLine,
     );
-    final week =
-        model.gestationalWeek == null ? '' : model.gestationalWeek.toString();
+    final week = model.gestationalWeek == null ? '' : model.gestationalWeek.toString();
     final isAfterBirth = BirthStatus.after.apiValue == model.isChildBirth;
     final type = _getListItemType(model);
 

@@ -1,8 +1,8 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 import '../validate_text_field/field_separated_title/widget.dart';
 import '../validate_text_field/field_title/widget.dart';
@@ -28,11 +28,14 @@ class ValidateTimePickTextField extends StatelessWidget {
   });
 
   final TimeOfDay? time;
+
   // フィールドの上に表示するタイトル
   final String? title;
+
   // タイトルが二分割する時に使用する
   final String? forwardTitle;
   final String? backTitle;
+
   // フィールドの上に必須を表示する
   final bool isRequired;
   final String? hintText;

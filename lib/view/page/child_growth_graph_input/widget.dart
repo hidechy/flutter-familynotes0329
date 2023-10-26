@@ -1,21 +1,19 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../data/model/child_growth_record_list/model.dart';
 import '../../../extension/date_time.dart';
-
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../component/ihs_dialog/widget.dart';
-
 import '../../component/validate_date_pick_text_field/widget.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 import '../../style/texts.dart';
 import 'notifier.dart';

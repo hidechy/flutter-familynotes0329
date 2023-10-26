@@ -1,10 +1,10 @@
-import 'package:family_notes/data/http/client.dart';
-import 'package:family_notes/data/http/path.dart';
-import 'package:family_notes/data/model/pregnant_dental_check_record_detail/model.dart';
-import 'package:family_notes/data/model/pregnant_dental_check_record_list/model.dart';
-import 'package:family_notes/data/model/response/model.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../http/client.dart';
+import '../http/path.dart';
+import '../model/pregnant_dental_check_record_detail/model.dart';
+import '../model/pregnant_dental_check_record_list/model.dart';
+import '../model/response/model.dart';
 import '../request/pregnant_dental_check_add/request.dart';
 
 final pregnantDentalCheckRepositoryProvider =

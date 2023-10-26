@@ -1,6 +1,3 @@
-import 'package:family_notes/view/page/check_sheet_growth/widget.dart';
-import 'package:family_notes/view/page/check_sheet_support/widget.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -9,6 +6,9 @@ import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
+import '../../style/text_style.dart';
+import '../check_sheet_growth/widget.dart';
+import '../check_sheet_support/widget.dart';
 
 /// チェックシート選択画面
 class CheckSheetSelectPage extends ConsumerWidget {

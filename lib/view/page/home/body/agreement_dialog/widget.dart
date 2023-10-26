@@ -1,6 +1,6 @@
-import 'package:family_notes/data/model/consent/model.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../data/model/consent/model.dart';
 import '../../../../component/ihs_button/type.dart';
 import '../../../../component/ihs_button/widget.dart';
 import '../../../../style/colors.dart';

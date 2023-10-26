@@ -1,4 +1,3 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -7,6 +6,7 @@ import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 import 'field_separated_title/widget.dart';
 import 'field_title/widget.dart';
@@ -106,11 +106,8 @@ class ValidateTextField extends HookWidget {
               filled: true,
               fillColor: type.fillColor,
               hintText: hintText,
-              hintStyle: hintStyle ??
-                  IHSTextStyle.small.copyWith(color: IHSColors.black200),
-              suffixIcon: isPasswordInputField
-                  ? _visibleIcon(isVisible: isVisible)
-                  : null,
+              hintStyle: hintStyle ?? IHSTextStyle.small.copyWith(color: IHSColors.black200),
+              suffixIcon: isPasswordInputField ? _visibleIcon(isVisible: isVisible) : null,
               errorMaxLines: errorMaxLines,
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               enabledBorder: _boderStyle,

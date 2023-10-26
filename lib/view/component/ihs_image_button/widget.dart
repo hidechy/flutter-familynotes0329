@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../style/colors.dart';
 import '../../style/text_style.dart';
 
 /// IHSの画像ボタンコンポーネント

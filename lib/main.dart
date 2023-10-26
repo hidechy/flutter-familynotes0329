@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:family_notes/data/local/local_client.dart';
-import 'package:family_notes/data/service/firebase/messaging.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,7 +7,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import 'app.dart';
+import 'data/local/local_client.dart';
 import 'data/service/firebase/core.dart';
+import 'data/service/firebase/messaging.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {

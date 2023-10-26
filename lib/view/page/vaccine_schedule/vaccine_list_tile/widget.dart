@@ -1,11 +1,11 @@
-import 'package:family_notes/view/page/vaccine_schedule/type.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 
 import '../../../style/colors.dart';
+import '../../../style/text_style.dart';
 import '../../vaccine_done_input/select_view_list/dose_type_label/widget.dart';
 import '../inoculation_text/widget.dart';
 import '../state.dart';
+import '../type.dart';
 
 /// vaccine_listのtileコンポーネント
 class VaccineListTile extends StatelessWidget {

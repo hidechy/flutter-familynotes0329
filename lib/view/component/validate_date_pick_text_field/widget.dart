@@ -1,10 +1,10 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 import '../validate_text_field/field_separated_title/widget.dart';
 import '../validate_text_field/field_title/widget.dart';
@@ -111,9 +111,7 @@ class ValidateDatePickTextField extends StatelessWidget {
 
   Future<void> _showPicker(BuildContext context) async {
     final now = DateTime.now();
-    final initialDate = isParent
-        ? dateTime ?? DateTime(now.year - 30, now.month)
-        : dateTime ?? now;
+    final initialDate = isParent ? dateTime ?? DateTime(now.year - 30, now.month) : dateTime ?? now;
     final pickedDate = await showDatePicker(
       locale: const Locale('ja'),
       context: context,

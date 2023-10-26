@@ -1,7 +1,8 @@
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import '../../../style/colors.dart';
+import '../../../style/text_style.dart';
 
 /// 記録一覧で使用するアイテム
 class RecordItem extends StatelessWidget {

@@ -1,14 +1,11 @@
 import 'dart:async';
 
-import 'package:family_notes/data/local/local_client.dart';
-import 'package:family_notes/util/page_navigator.dart';
-import 'package:family_notes/view/page/bottom_bar/notifier.dart';
-import 'package:family_notes/view/page/bottom_bar/widget.dart';
-import 'package:family_notes/view/page/setting/widget.dart';
-import 'package:family_notes/view/service/navigation.dart';
 import 'package:flutter/material.dart';
 
 import '../../provider/event/event.dart';
+import '../../util/page_navigator.dart';
+import '../../view/page/bottom_bar/notifier.dart';
+import '../../view/page/bottom_bar/widget.dart';
 import '../../view/page/check_sheet/widget.dart';
 import '../../view/page/child_growth_graph/widget.dart';
 import '../../view/page/child_health_check_select/widget.dart';
@@ -17,7 +14,10 @@ import '../../view/page/life_habit_check_select/widget.dart';
 import '../../view/page/pregnant_dental_check_select/widget.dart';
 import '../../view/page/pregnant_health_check_select/widget.dart';
 import '../../view/page/pregnant_weight_record_select/widget.dart';
+import '../../view/page/setting/widget.dart';
 import '../../view/page/vaccine_schedule/widget.dart';
+import '../../view/service/navigation.dart';
+import '../local/local_client.dart';
 
 class AppPage {
   bool pageDebug = false;

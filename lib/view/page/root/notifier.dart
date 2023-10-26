@@ -1,8 +1,8 @@
-import 'package:family_notes/data/request/consent/request.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/data/model/consent/model.dart';
 import '/data/repository/common.dart';
+import '../../../data/request/consent/request.dart';
 import 'state.dart';
 
 final rootStateProvider =

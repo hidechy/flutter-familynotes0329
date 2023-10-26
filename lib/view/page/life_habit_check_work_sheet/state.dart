@@ -1,13 +1,13 @@
-import 'package:family_notes/data/model/life_habit_question_answer_history_list/model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../data/model/life_habit_question_answer_history_list/model.dart';
 import '../../../extension/string.dart';
 
 part 'state.freezed.dart';
 
 @freezed
 class LifeHabitCheckWorkSheetState with _$LifeHabitCheckWorkSheetState {
-  const factory LifeHabitCheckWorkSheetState.loading() =
-      LifeHabitCheckWorkSheetStateLoading;
+  const factory LifeHabitCheckWorkSheetState.loading() = LifeHabitCheckWorkSheetStateLoading;
 
   const factory LifeHabitCheckWorkSheetState.loaded({
     required List<QuestionAnswerHistoryState> list,

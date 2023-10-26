@@ -1,7 +1,7 @@
-import 'package:family_notes/util/page_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../../../gen/assets.gen.dart';
+import '../../../util/page_navigator.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../style/colors.dart';
@@ -39,7 +39,7 @@ class SettingCancelMemberCompletePage extends StatelessWidget {
                   'アプリトップへ',
                   type: IHSButtonType.primary,
                   onPressed: () {
-                    PageNavigator.navigatePage(context, null, type:PageNavigator.typePopUntilFirst);
+                    PageNavigator.navigatePage(context, null, type: PageNavigator.typePopUntilFirst);
                   },
                 )
               ],

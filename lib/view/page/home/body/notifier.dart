@@ -1,10 +1,10 @@
-import 'package:family_notes/data/repository/common.dart';
-import 'package:family_notes/data/request/consent/request.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../data/local/local_client.dart';
 import '../../../../data/model/consent/model.dart';
+import '../../../../data/repository/common.dart';
+import '../../../../data/request/consent/request.dart';
 import '../../../../environment.dart';
 import '../../../../util/util.dart';
 import '../../../style/texts.dart';

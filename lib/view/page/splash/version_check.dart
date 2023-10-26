@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_dynamic_calls
 
-import 'package:family_notes/util/util.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../provider/config/notifier.dart';
+import '../../../util/util.dart';
 
 final Provider<VersionCheck> versionCheckProvider = Provider<VersionCheck>(
   (ProviderRef<VersionCheck> ref) => VersionCheck(

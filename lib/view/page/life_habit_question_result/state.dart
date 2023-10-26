@@ -1,16 +1,15 @@
-import 'package:family_notes/data/model/life_habit_question_answer_result_list/model.dart';
-import 'package:family_notes/view/page/life_habit_question_result/type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../data/model/life_habit_question_answer_result_list/model.dart';
 import '../life_habit_question/question_type.dart';
 import 'answer_point.dart';
+import 'type.dart';
 
 part 'state.freezed.dart';
 
 @freezed
 class LifeHabitQuestionResultState with _$LifeHabitQuestionResultState {
-  const factory LifeHabitQuestionResultState.loading() =
-      LifeHabitQuestionResultStateLoading;
+  const factory LifeHabitQuestionResultState.loading() = LifeHabitQuestionResultStateLoading;
 
   const factory LifeHabitQuestionResultState.loaded({
     required List<QuestionAnswerResultState> list,
@@ -35,12 +34,8 @@ class QuestionAnswerResultState with _$QuestionAnswerResultState {
   }) = _QuestionAnswerResultState;
 
   factory QuestionAnswerResultState.fromModel(QuestionAnswerResultModel model) {
-    final assetName = QuestionType.values
-        .firstWhere((element) => element.id == model.id)
-        .assetName;
-    final pointAssetName = AnswerPoint.values
-        .firstWhere((element) => element.value == model.point)
-        .assetName;
+    final assetName = QuestionType.values.firstWhere((element) => element.id == model.id).assetName;
+    final pointAssetName = AnswerPoint.values.firstWhere((element) => element.value == model.point).assetName;
 
     return QuestionAnswerResultState(
       title: model.title,
@@ -125,8 +120,7 @@ class OtherCommentsState with _$OtherCommentsState {
 
   factory OtherCommentsState.fromModel(OtherCommentsModel model) {
     return OtherCommentsState(
-      categoryList:
-          model.categoryList.map(OtherCategoryState.fromModel).toList(),
+      categoryList: model.categoryList.map(OtherCategoryState.fromModel).toList(),
     );
   }
 }

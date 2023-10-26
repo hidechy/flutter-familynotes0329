@@ -1,4 +1,3 @@
-import 'package:family_notes/extension/int.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -7,6 +6,7 @@ import '/view/component/gradation_layout/widget.dart';
 import '/view/page/pregnant_weight_record_select/notifier.dart';
 import '/view/style/colors.dart';
 import '/view/style/text_style.dart';
+import '../../../extension/int.dart';
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
 import '../../component/record_list/widget.dart';

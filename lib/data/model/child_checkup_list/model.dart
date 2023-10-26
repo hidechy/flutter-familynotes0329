@@ -1,5 +1,6 @@
-import 'package:family_notes/data/model/converter/datetime.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../converter/datetime.dart';
 
 part 'model.freezed.dart';
 part 'model.g.dart';

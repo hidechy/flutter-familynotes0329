@@ -1,5 +1,3 @@
-import 'package:family_notes/view/page/life_habit_check_work_sheet/widget.dart';
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -10,7 +8,9 @@ import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
+import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import '../life_habit_check_work_sheet/widget.dart';
 
 /// 生活習慣病予防
 class LifeHabitCheckSelectPage extends ConsumerWidget {

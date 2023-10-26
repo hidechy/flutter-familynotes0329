@@ -1,13 +1,12 @@
-import 'package:family_notes/app.dart';
-import 'package:family_notes/data/local/local_client.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../app.dart';
+import '../../../data/local/local_client.dart';
 import '../../../provider/child/notifier.dart';
 import '../../../provider/child/state.dart';
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
-
 import 'body/state.dart';
 import 'body/widget.dart';
 

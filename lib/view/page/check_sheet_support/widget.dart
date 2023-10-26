@@ -1,22 +1,22 @@
-import 'package:family_notes/gen/assets.gen.dart';
-import 'package:family_notes/util/util.dart';
-import 'package:family_notes/view/component/swicth_area/widget.dart';
-import 'package:family_notes/view/page/check_sheet_support/notifier.dart';
-import 'package:family_notes/view/page/check_sheet_support/state.dart';
-import 'package:family_notes/view/page/check_sheet_support_result/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
+import '../../../gen/assets.gen.dart';
 import '../../../util/page_navigator.dart';
+import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../component/multiline_text_field/widget.dart';
+import '../../component/swicth_area/widget.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
 import '../../style/texts.dart';
+import '../check_sheet_support_result/widget.dart';
+import 'notifier.dart';
+import 'state.dart';
 import 'status.dart';
 
 /// サポートチェックシート画面

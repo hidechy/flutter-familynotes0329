@@ -1,5 +1,3 @@
-import 'package:family_notes/view/page/pregnant_health_check_input/converter.dart';
-import 'package:family_notes/view/page/pregnant_health_check_input/page_status.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,12 +8,13 @@ import '../../../data/repository/pregnant.dart';
 import '../../../provider/child/notifier.dart';
 import '../../../util/util.dart';
 import '../pregnant_health_check_select/notifier.dart';
+import 'converter.dart';
+import 'page_status.dart';
 import 'state.dart';
 
 /// 妊婦健診の入力の状態を管理するプロバイダー
-final pregnantHealthCheckInputStateProvider =
-    AutoDisposeStateNotifierProvider.family<PregnantHealthCheckInputNotifier,
-        PregnantHealthCheckInputPageStatus, CheckupModel?>((ref, checkupModel) {
+final pregnantHealthCheckInputStateProvider = AutoDisposeStateNotifierProvider.family<PregnantHealthCheckInputNotifier,
+    PregnantHealthCheckInputPageStatus, CheckupModel?>((ref, checkupModel) {
   return PregnantHealthCheckInputNotifier(
     checkupModel: checkupModel,
     ref: ref,
@@ -23,8 +22,7 @@ final pregnantHealthCheckInputStateProvider =
   );
 });
 
-class PregnantHealthCheckInputNotifier
-    extends StateNotifier<PregnantHealthCheckInputPageStatus> {
+class PregnantHealthCheckInputNotifier extends StateNotifier<PregnantHealthCheckInputPageStatus> {
   PregnantHealthCheckInputNotifier({
     required CheckupModel? checkupModel,
     required this.ref,
@@ -59,42 +57,31 @@ class PregnantHealthCheckInputNotifier
 
     state = const PregnantHealthCheckInputPageStatus.init();
 
-    await repository
-        .fetchCheckupRecordDetail(motherCheckupRecordId: recordId)
-        .then(
+    await repository.fetchCheckupRecordDetail(motherCheckupRecordId: recordId).then(
       (response) {
         final checkupDetail = response.data;
 
-        if (response.status == ResponseStatus.failure ||
-            checkupDetail == null) {
+        if (response.status == ResponseStatus.failure || checkupDetail == null) {
           _showError(response.msg ?? '予期せぬエラーが発生しました');
           return;
         }
 
-        final kgWeight =
-            checkupDetail.weight?.floor().toString().toKiloGram() ?? '';
+        final kgWeight = checkupDetail.weight?.floor().toString().toKiloGram() ?? '';
 
         state = PregnantHealthCheckInputPageStatus.loaded(
           data: PregnantHealthCheckInputState(
             inputData: PregnantHealthCheckInputData(
-              date: checkupDetail.checkupDay
-                  .toDateTime(DateFormatType.yyyymmddLine),
+              date: checkupDetail.checkupDay.toDateTime(DateFormatType.yyyymmddLine),
               week: checkupDetail.gestationalWeek?.toString() ?? '',
               day: checkupDetail.gestationalWeekDay?.toString() ?? '',
               weight: kgWeight,
               selectedItem: {
-                PregnantHealthCheckInputListItemType.noProblem:
-                    checkupDetail.isNormal == '1',
-                PregnantHealthCheckInputListItemType.threatenedMiscarriage:
-                    checkupDetail.isTa == '1',
-                PregnantHealthCheckInputListItemType.hyperTensionSyndrome:
-                    checkupDetail.isPih == '1',
-                PregnantHealthCheckInputListItemType.gestationalDiabetes:
-                    checkupDetail.isGdm == '1',
-                PregnantHealthCheckInputListItemType.anemia:
-                    checkupDetail.isAnemia == '1',
-                PregnantHealthCheckInputListItemType.others:
-                    checkupDetail.isOtherDisease == '1',
+                PregnantHealthCheckInputListItemType.noProblem: checkupDetail.isNormal == '1',
+                PregnantHealthCheckInputListItemType.threatenedMiscarriage: checkupDetail.isTa == '1',
+                PregnantHealthCheckInputListItemType.hyperTensionSyndrome: checkupDetail.isPih == '1',
+                PregnantHealthCheckInputListItemType.gestationalDiabetes: checkupDetail.isGdm == '1',
+                PregnantHealthCheckInputListItemType.anemia: checkupDetail.isAnemia == '1',
+                PregnantHealthCheckInputListItemType.others: checkupDetail.isOtherDisease == '1',
               },
               memo: checkupDetail.note ?? '',
               memoController: TextEditingController(

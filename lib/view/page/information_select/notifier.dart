@@ -1,11 +1,11 @@
-import 'package:family_notes/data/request/notice_list/request.dart';
-import 'package:family_notes/view/style/texts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../../../data/model/response/model.dart';
 import '../../../data/repository/notice.dart';
+import '../../../data/request/notice_list/request.dart';
 import '../../../util/util.dart';
+import '../../style/texts.dart';
 import 'state.dart';
 
 final infomationSelectProvider = AutoDisposeStateNotifierProvider<

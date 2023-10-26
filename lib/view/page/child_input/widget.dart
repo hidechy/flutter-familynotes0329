@@ -1,18 +1,18 @@
-import 'package:family_notes/type/gender.dart';
-import 'package:family_notes/view/component/gender_required_text/widget.dart';
-import 'package:family_notes/view/component/validate_child_gender_segment_field/widget.dart';
-import 'package:family_notes/view/component/validate_text_field/child_gedner_type.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
+import '../../../type/gender.dart';
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
+import '../../component/gender_required_text/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../component/main_layout/widget.dart';
 import '../../component/prefix_text/widget.dart';
+import '../../component/validate_child_gender_segment_field/widget.dart';
 import '../../component/validate_date_pick_text_field/widget.dart';
+import '../../component/validate_text_field/child_gedner_type.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
 import '../../style/constants.dart';

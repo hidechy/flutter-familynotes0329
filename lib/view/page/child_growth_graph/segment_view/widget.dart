@@ -1,8 +1,8 @@
-import 'package:family_notes/view/page/child_growth_graph/state.dart';
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../style/colors.dart';
 import '../../../style/text_style.dart';
+import '../state.dart';
 
 class SegmentView extends StatelessWidget {
   const SegmentView({

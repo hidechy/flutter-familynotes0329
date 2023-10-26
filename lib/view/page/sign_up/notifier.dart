@@ -1,4 +1,3 @@
-import 'package:family_notes/data/model/consent/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -8,6 +7,7 @@ import '/data/repository/common.dart';
 import '/provider/signup/notifier.dart';
 import '../../../data/local/local_client.dart';
 import '../../../data/model/code_publish/model.dart';
+import '../../../data/model/consent/model.dart';
 import 'state.dart';
 
 /// 新規登録の入力の状態を管理するプロバイダー

@@ -1,6 +1,5 @@
-import 'package:family_notes/type/gender.dart';
-
 import '../../../data/request/child_birth/request.dart';
+import '../../../type/gender.dart';
 import 'state.dart';
 
 class ChildBirthRequestConverter {

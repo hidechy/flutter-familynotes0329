@@ -1,9 +1,9 @@
-import 'package:family_notes/view/component/base_layout/widget.dart';
-import 'package:family_notes/view/component/swicth_area/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../component/base_app_bar/widget.dart';
+import '../../component/base_layout/widget.dart';
+import '../../component/swicth_area/widget.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
 import 'notifier.dart';

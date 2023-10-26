@@ -1,5 +1,6 @@
-import 'package:family_notes/view/page/check_sheet_growth_result/type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'type.dart';
 
 part 'state.freezed.dart';
 

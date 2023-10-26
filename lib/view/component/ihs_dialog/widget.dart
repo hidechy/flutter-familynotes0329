@@ -1,7 +1,8 @@
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
+
+import '../../style/text_style.dart';
+import '../ihs_button/type.dart';
+import '../ihs_button/widget.dart';
 
 /// アラートダイアログ
 ///   ボタン一つ -> ピンク色のボタンで固定
@@ -24,6 +25,7 @@ class IHSDialog {
   final BuildContext context;
   final String title;
   final String okStr;
+
   // nullならボタン自体非表示
   final String? cancelStr;
   final TextAlign textAlign;
@@ -43,7 +45,7 @@ class IHSDialog {
       context: context,
       builder: (_) {
         return WillPopScope(
-            onWillPop: () async => cancelAble?? true,
+            onWillPop: () async => cancelAble ?? true,
             child: AlertDialog(
               insetPadding: const EdgeInsets.all(16),
               shape: RoundedRectangleBorder(
@@ -56,9 +58,7 @@ class IHSDialog {
                 style: IHSTextStyle.small,
               ),
               actions: <Widget>[
-                cancelStr == null
-                    ? _buildSingleButtton()
-                    : _buildTwiceButtons(),
+                cancelStr == null ? _buildSingleButtton() : _buildTwiceButtons(),
               ],
             ));
       },
@@ -69,9 +69,7 @@ class IHSDialog {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IHSButton(okStr,
-            type: okButtonType,
-            horizontalInnerPadding: okHorizontalPadding, onPressed: () {
+        IHSButton(okStr, type: okButtonType, horizontalInnerPadding: okHorizontalPadding, onPressed: () {
           onTap?.call(context);
           Navigator.of(context).pop();
         }),
@@ -84,9 +82,7 @@ class IHSDialog {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Expanded(
-          child: IHSButton(okStr,
-              type: okButtonType,
-              horizontalInnerPadding: okHorizontalPadding, onPressed: () {
+          child: IHSButton(okStr, type: okButtonType, horizontalInnerPadding: okHorizontalPadding, onPressed: () {
             onTap?.call(context);
             Navigator.of(context).pop();
           }),

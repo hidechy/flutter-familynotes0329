@@ -1,6 +1,6 @@
-import 'package:family_notes/data/model/pregnant_dental_check_record_list/model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../data/model/pregnant_dental_check_record_list/model.dart';
 import '../../../extension/string.dart';
 
 part 'state.freezed.dart';
@@ -8,8 +8,7 @@ part 'state.freezed.dart';
 @freezed
 class PregnantDentalCheckSelectState with _$PregnantDentalCheckSelectState {
   /// ローディング
-  const factory PregnantDentalCheckSelectState.loading() =
-      PregnantDentalCheckSelectStateLoading;
+  const factory PregnantDentalCheckSelectState.loading() = PregnantDentalCheckSelectStateLoading;
 
   /// ローディング完了
   const factory PregnantDentalCheckSelectState.loaded({

@@ -1,10 +1,10 @@
-import 'package:family_notes/view/style/texts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '/data/repository/child_growth_record.dart';
 import '/provider/child/notifier.dart';
 import '../../../data/model/response/model.dart';
 import '../../../util/util.dart';
+import '../../style/texts.dart';
 import 'state.dart';
 
 /// 身体発育曲線画面の状態を管理するプロバイダー

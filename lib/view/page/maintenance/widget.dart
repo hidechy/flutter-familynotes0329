@@ -1,9 +1,9 @@
-import 'package:family_notes/provider/app/notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../gen/assets.gen.dart';
+import '../../../provider/app/notifier.dart';
 import '../../../util/page_navigator.dart';
 import '../../service/navigation.dart';
 import '../../style/colors.dart';

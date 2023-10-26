@@ -1,5 +1,6 @@
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../style/colors.dart';
 
 /// 破線
 class DotLine extends StatelessWidget {

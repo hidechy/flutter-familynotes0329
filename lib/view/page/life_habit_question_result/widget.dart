@@ -1,11 +1,9 @@
-import 'package:family_notes/gen/assets.gen.dart';
-import 'package:family_notes/view/page/life_habit_question_general_comment/widget.dart';
-import 'package:family_notes/view/page/life_habit_question_result/other_comment_daialog/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../extension/context.dart';
+import '../../../gen/assets.gen.dart';
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
@@ -14,8 +12,10 @@ import '../../component/ihs_button/widget.dart';
 import '../../component/ihs_image_button/widget.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import '../life_habit_question_general_comment/widget.dart';
 import 'answer_commnet_dialog/widget.dart';
 import 'notifier.dart';
+import 'other_comment_daialog/widget.dart';
 import 'state.dart';
 import 'type.dart';
 
@@ -34,8 +34,7 @@ class LifeHabitQuestionResultPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final status =
-        ref.watch(lifeHabitQuestionResultStateProvider(answerHeaderId));
+    final status = ref.watch(lifeHabitQuestionResultStateProvider(answerHeaderId));
     final scrollController = ScrollController();
 
     return GradationLayout(
@@ -75,8 +74,7 @@ class LifeHabitQuestionResultPage extends ConsumerWidget {
                       for (var index = 0; index < questions.length; index++)
                         _AnswerResultArea(question: questions[index]),
                       // 設問とは関係のない固定表示の内容
-                      for (final otherCategory
-                          in loadedState.otherComments.categoryList)
+                      for (final otherCategory in loadedState.otherComments.categoryList)
                         _OtherCategoryArea(otherCategory: otherCategory),
                       const Divider(color: IHSColors.pink300),
                       const SizedBox(height: 24),
@@ -144,9 +142,7 @@ class _AnswerResultArea extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Align(
-          child: question.pointAssetName.isEmpty
-              ? const SizedBox.shrink()
-              : SvgPicture.asset(question.pointAssetName),
+          child: question.pointAssetName.isEmpty ? const SizedBox.shrink() : SvgPicture.asset(question.pointAssetName),
         ),
         const SizedBox(height: 16),
         Align(
@@ -246,9 +242,7 @@ class _ChoiceListArea extends StatelessWidget {
       width: 24,
       child: Column(
         children: [
-          selected
-              ? SvgPicture.asset(Assets.images.akarIconstriangleFill)
-              : const SizedBox(height: 24),
+          selected ? SvgPicture.asset(Assets.images.akarIconstriangleFill) : const SizedBox(height: 24),
           Container(
             height: 10,
             width: 1,

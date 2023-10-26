@@ -1,10 +1,10 @@
-import 'package:family_notes/view/style/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '/extension/date_time.dart';
 import '../../../gen/assets.gen.dart';
 import '../../style/colors.dart';
+import '../../style/constants.dart';
 import '../../style/text_style.dart';
 
 /// 日付選択(年月日)をするテキストフィールド
@@ -122,9 +122,7 @@ class DatePickTextField extends StatelessWidget {
 
   Future<void> _showPicker(BuildContext context) async {
     final now = DateTime.now();
-    final initialDate = isParent
-        ? dateTime ?? DateTime(now.year - 30, now.month)
-        : dateTime ?? now;
+    final initialDate = isParent ? dateTime ?? DateTime(now.year - 30, now.month) : dateTime ?? now;
     final pickedDate = await showDatePicker(
       locale: const Locale('ja'),
       context: context,

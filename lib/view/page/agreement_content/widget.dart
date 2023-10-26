@@ -1,18 +1,18 @@
 // ignore_for_file: must_be_immutable
-import 'package:family_notes/provider/config/notifier.dart';
-import 'package:family_notes/view/component/base_layout/widget.dart';
-import 'package:family_notes/view/style/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '/data/model/consent/model.dart';
+import '../../../provider/config/notifier.dart';
 import '../../../util/util.dart';
 import '../../component/base_app_bar/widget.dart';
+import '../../component/base_layout/widget.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import '../../style/texts.dart';
 import 'notifier.dart';
 import 'type.dart';
 

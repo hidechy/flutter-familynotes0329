@@ -1,6 +1,7 @@
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
+
+import '../../../style/colors.dart';
+import '../../../style/text_style.dart';
 
 /// ホームで表示するリマインダボタン
 /// - お子さまが生まれた時はこちらをタップ

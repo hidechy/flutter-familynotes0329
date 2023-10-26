@@ -1,5 +1,3 @@
-import 'package:family_notes/view/style/constants.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -15,6 +13,8 @@ import '../../component/prefix_text/widget.dart';
 import '../../component/validate_date_pick_text_field/widget.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
+import '../../style/constants.dart';
+import '../../style/text_style.dart';
 import '../../style/texts.dart';
 import 'notifier.dart';
 import 'state.dart';

@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:family_notes/extension/string.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../extension/string.dart';
 
 class DateTimeConverter implements JsonConverter<DateTime, String> {
   const DateTimeConverter();

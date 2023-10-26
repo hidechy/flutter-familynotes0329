@@ -1,9 +1,9 @@
-import 'package:family_notes/view/component/base_app_bar/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../page/error/widget.dart';
 import '../../style/colors.dart';
+import '../base_app_bar/widget.dart';
 import '../drawer_menu/widget.dart';
 
 class MainLayout extends ConsumerWidget {
@@ -30,8 +30,7 @@ class MainLayout extends ConsumerWidget {
   final void Function()? headerPressed;
   final void Function()? reload;
 
-  EdgeInsets get margin =>
-      const EdgeInsets.symmetric(vertical: 24, horizontal: 16);
+  EdgeInsets get margin => const EdgeInsets.symmetric(vertical: 24, horizontal: 16);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

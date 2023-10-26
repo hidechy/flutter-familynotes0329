@@ -1,8 +1,8 @@
-import 'package:family_notes/view/component/validate_text_field/type.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
+import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/validation.dart';
 import 'type.dart';
 

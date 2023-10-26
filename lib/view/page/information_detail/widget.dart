@@ -1,4 +1,3 @@
-import 'package:family_notes/view/page/information_select/notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -6,9 +5,9 @@ import '../../../extension/date_time.dart';
 import '../../../extension/text.dart';
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
-
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import '../information_select/notifier.dart';
 import 'notifier.dart';
 import 'state.dart';
 

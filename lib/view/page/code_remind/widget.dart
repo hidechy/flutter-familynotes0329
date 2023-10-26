@@ -1,4 +1,3 @@
-import 'package:family_notes/view/page/password_reset_code_input/widget.dart';
 import 'package:flutter/material.dart';
 
 import '/view/component/ihs_button/type.dart';
@@ -8,6 +7,7 @@ import '/view/style/colors.dart';
 import '/view/style/text_style.dart';
 import '../../../util/page_navigator.dart';
 import '../code_confirm/widget.dart';
+import '../password_reset_code_input/widget.dart';
 import 'type.dart';
 
 /// 「認証コードをご確認ください」画面

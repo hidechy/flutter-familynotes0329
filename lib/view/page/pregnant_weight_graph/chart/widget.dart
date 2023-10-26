@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:family_notes/provider/child/state.dart';
-import 'package:family_notes/provider/event/event.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +8,8 @@ import '/extension/date_time.dart';
 import '/view/style/text_style.dart';
 import '../../../../data/model/pregnant_weight_record_graph/model.dart';
 import '../../../../extension/double.dart';
+import '../../../../provider/child/state.dart';
+import '../../../../provider/event/event.dart';
 import '../../child_growth_graph/graph/style.dart';
 import 'arrow/widget.dart';
 
@@ -33,6 +33,7 @@ class WeightChart extends StatefulWidget {
 
 class _WeightChartState extends State<WeightChart> {
   late StreamSubscription subscription;
+
   List<WeightGraphData> get _records => widget.records;
 
   /// 現在のX軸の最小値

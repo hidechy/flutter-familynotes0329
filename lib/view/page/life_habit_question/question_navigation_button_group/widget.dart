@@ -1,10 +1,9 @@
-
-import 'package:family_notes/view/page/life_habit_question/back_to_previous_button/widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../component/ihs_button/type.dart';
 import '../../../component/ihs_button/widget.dart';
 import '../../../component/ihs_dialog/widget.dart';
+import '../back_to_previous_button/widget.dart';
 import '../notifier.dart';
 import '../state.dart';
 

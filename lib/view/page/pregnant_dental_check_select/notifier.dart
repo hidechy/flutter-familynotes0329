@@ -1,29 +1,26 @@
-import 'package:family_notes/data/repository/pregnant_dental_check.dart';
-import 'package:family_notes/provider/user/notifier.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../data/repository/pregnant_dental_check.dart';
+import '../../../provider/user/notifier.dart';
 import '../../../util/util.dart';
 import '../../style/texts.dart';
 import 'state.dart';
 
 /// 妊婦歯科健診選択画面を管理するプロバイダー
-final pregnantDentalCheckSelectProvider = AutoDisposeStateNotifierProvider<
-    PregnantDentalCheckSelectNotifier, PregnantDentalCheckSelectState>((ref) {
-  final childId =
-      ref.watch(userStateProvider).mapOrNull(authenticated: (value) {
+final pregnantDentalCheckSelectProvider =
+    AutoDisposeStateNotifierProvider<PregnantDentalCheckSelectNotifier, PregnantDentalCheckSelectState>((ref) {
+  final childId = ref.watch(userStateProvider).mapOrNull(authenticated: (value) {
     return value.selectedChildId;
   });
 
   return PregnantDentalCheckSelectNotifier(
     childId: childId,
     ref: ref,
-    pregnantDentalCheckRepository:
-        ref.watch(pregnantDentalCheckRepositoryProvider),
+    pregnantDentalCheckRepository: ref.watch(pregnantDentalCheckRepositoryProvider),
   );
 });
 
-class PregnantDentalCheckSelectNotifier
-    extends StateNotifier<PregnantDentalCheckSelectState> {
+class PregnantDentalCheckSelectNotifier extends StateNotifier<PregnantDentalCheckSelectState> {
   PregnantDentalCheckSelectNotifier({
     required int? childId,
     required this.ref,

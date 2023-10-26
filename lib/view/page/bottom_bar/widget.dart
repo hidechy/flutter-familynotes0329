@@ -1,18 +1,17 @@
 import 'dart:async';
 
 import 'package:badges/badges.dart' as badges;
-import 'package:family_notes/data/local/local_client.dart';
-import 'package:family_notes/view/page/error/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../data/local/local_client.dart';
 import '../../../data/service/firebase/messaging.dart';
 import '../../../gen/assets.gen.dart';
-
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
 import '../child_book_select/widget.dart';
+import '../error/widget.dart';
 import '../home/widget.dart';
 import '../information_select/widget.dart';
 import 'notifier.dart';

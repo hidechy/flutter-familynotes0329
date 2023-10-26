@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:family_notes/provider/event/event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart';
@@ -11,6 +10,7 @@ import '/data/http/path.dart';
 import '/data/local/local_client.dart';
 import '/environment.dart';
 import '../../provider/app/notifier.dart';
+import '../../provider/event/event.dart';
 import '../../provider/loading/notifier.dart';
 import '../../util/page_navigator.dart';
 import '../../util/util.dart';

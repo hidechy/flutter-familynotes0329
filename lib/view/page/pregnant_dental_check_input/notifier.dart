@@ -1,11 +1,11 @@
-import 'package:family_notes/data/repository/pregnant_dental_check.dart';
-import 'package:family_notes/extension/date_time.dart';
-import 'package:family_notes/provider/user/notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../data/model/response/model.dart';
+import '../../../data/repository/pregnant_dental_check.dart';
 import '../../../data/request/pregnant_dental_check_add/request.dart';
+import '../../../extension/date_time.dart';
+import '../../../provider/user/notifier.dart';
 import '../../../util/util.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/validation.dart';
@@ -17,11 +17,8 @@ import 'status.dart';
 import 'type.dart';
 
 /// 歯科健診入力の状態を管理するプロバイダー
-final pregnantDentalCheckInputProvider =
-    AutoDisposeStateNotifierProvider.family<
-        PregnantDentalCheckInputNotifier,
-        PregnantDentalCheckInputState,
-        PregnantDentalCheckInputType>((ref, type) {
+final pregnantDentalCheckInputProvider = AutoDisposeStateNotifierProvider.family<PregnantDentalCheckInputNotifier,
+    PregnantDentalCheckInputState, PregnantDentalCheckInputType>((ref, type) {
   final childId = ref.watch(userStateProvider).mapOrNull(
     authenticated: (value) {
       return value.selectedChildId;
@@ -32,13 +29,11 @@ final pregnantDentalCheckInputProvider =
     type: type,
     childId: childId,
     ref: ref,
-    pregnantDentalCheckRepository:
-        ref.read(pregnantDentalCheckRepositoryProvider),
+    pregnantDentalCheckRepository: ref.read(pregnantDentalCheckRepositoryProvider),
   );
 });
 
-class PregnantDentalCheckInputNotifier
-    extends StateNotifier<PregnantDentalCheckInputState> {
+class PregnantDentalCheckInputNotifier extends StateNotifier<PregnantDentalCheckInputState> {
   PregnantDentalCheckInputNotifier({
     required PregnantDentalCheckInputType type,
     required this.childId,
@@ -188,9 +183,7 @@ class PregnantDentalCheckInputNotifier
     PregnantDentalCheckInputLoaded loadedState,
   ) {
     final inputData = loadedState.inputData;
-    final week = inputData.week == null || inputData.week!.isEmpty
-        ? null
-        : int.parse(inputData.week!);
+    final week = inputData.week == null || inputData.week!.isEmpty ? null : int.parse(inputData.week!);
     final type = loadedState.inputData.type;
     final isChildbirth = _getBirthValueToRequest(inputData.isAfterBirth);
     final isNormal = _getProbremValueToRequest(type);
@@ -211,9 +204,7 @@ class PregnantDentalCheckInputNotifier
   }
 
   String _getBirthValueToRequest(bool isAfterBirth) {
-    return isAfterBirth
-        ? BirthStatus.after.apiValue
-        : BirthStatus.before.apiValue;
+    return isAfterBirth ? BirthStatus.after.apiValue : BirthStatus.before.apiValue;
   }
 
   String _getProbremValueToRequest(PregnantDentalCheckInputListItemType type) {
@@ -248,9 +239,7 @@ class PregnantDentalCheckInputNotifier
     final loadedState = state as PregnantDentalCheckInputLoaded;
     debugPrint(state.mapOrNull(loaded: (value) => value.toString()));
     final recordId = loadedState.inputData.motherDentalCheckupRecordId!;
-    await pregnantDentalCheckRepository
-        .delete(motherDentalCheckupRecordId: recordId)
-        .then((response) {
+    await pregnantDentalCheckRepository.delete(motherDentalCheckupRecordId: recordId).then((response) {
       if (response.status == ResponseStatus.failure) {
         onFailure(response.msg ?? IHSTexts.error);
         return;

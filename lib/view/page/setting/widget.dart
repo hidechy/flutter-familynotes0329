@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:family_notes/view/page/splash/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,6 +16,7 @@ import '../children_info_list/widget.dart';
 import '../profile_info/widget.dart';
 import '../setting_cancel_member_complete/widget.dart';
 import '../setting_notification/widget.dart';
+import '../splash/widget.dart';
 import 'type.dart';
 
 class SettingPage extends ConsumerWidget {

@@ -1,5 +1,3 @@
-import 'package:family_notes/extension/date_time.dart';
-import 'package:family_notes/view/component/validate_text_field/type.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -7,9 +5,11 @@ import 'package:reactive_forms/reactive_forms.dart';
 import '../../../data/model/child_growth_record_list/model.dart';
 import '../../../data/model/response/model.dart';
 import '../../../data/repository/child_growth_record.dart';
+import '../../../extension/date_time.dart';
 import '../../../extension/string.dart';
 import '../../../provider/child/notifier.dart';
 import '../../../util/util.dart';
+import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/validation.dart';
 import '../../style/texts.dart';
 import '../child_growth_record_select/notifier.dart';
@@ -17,9 +17,8 @@ import 'converter.dart';
 import 'state.dart';
 
 /// 身体発育曲線の入力の状態を管理するプロバイダー
-final childWeightGraphInputStateProvider =
-    AutoDisposeStateNotifierProvider.family<ChildGrowthGraphInputNotifier,
-        ChildGrowthGraphInputState, ChildGrowthRecord?>((ref, record) {
+final childWeightGraphInputStateProvider = AutoDisposeStateNotifierProvider.family<ChildGrowthGraphInputNotifier,
+    ChildGrowthGraphInputState, ChildGrowthRecord?>((ref, record) {
   return ChildGrowthGraphInputNotifier(
     record: record,
     ref: ref,
@@ -27,8 +26,7 @@ final childWeightGraphInputStateProvider =
   );
 });
 
-class ChildGrowthGraphInputNotifier
-    extends StateNotifier<ChildGrowthGraphInputState> {
+class ChildGrowthGraphInputNotifier extends StateNotifier<ChildGrowthGraphInputState> {
   ChildGrowthGraphInputNotifier({
     required ChildGrowthRecord? record,
     required this.ref,
@@ -61,8 +59,7 @@ class ChildGrowthGraphInputNotifier
             0) ~/
         12;
 
-    final initialWeightType =
-        _oneYearOld > childAge ? WeightType.g : WeightType.kg;
+    final initialWeightType = _oneYearOld > childAge ? WeightType.g : WeightType.kg;
     ChildGrowthInputData inputData;
     FormControl<String> dateController;
     FormControl<String> heightController;
@@ -81,13 +78,9 @@ class ChildGrowthGraphInputNotifier
       inputData = ChildGrowthInputData(weightType: initialWeightType);
     } else {
       final height = record.height != null ? record.height.toString() : '';
-      final grams = record.weight != null && WeightType.g == initialWeightType
-          ? record.weight.toString()
-          : '';
+      final grams = record.weight != null && WeightType.g == initialWeightType ? record.weight.toString() : '';
       final kilograms =
-          record.weight != null && WeightType.kg == initialWeightType
-              ? record.weight.toString().toKiloGram()
-              : '';
+          record.weight != null && WeightType.kg == initialWeightType ? record.weight.toString().toKiloGram() : '';
       final head = record.head != null ? record.head.toString() : '';
       final chest = record.chest != null ? record.chest.toString() : '';
       dateController = _setDateController(record.date);
@@ -197,9 +190,7 @@ class ChildGrowthGraphInputNotifier
   /// 体重(kg)->体重(g)への体重値変換
   void weightConvertFromKilogramsToGrams() {
     final kilograms = state.inputData.kilograms;
-    if (kilograms == null ||
-        kilograms.isEmpty ||
-        double.tryParse(kilograms) == null) {
+    if (kilograms == null || kilograms.isEmpty || double.tryParse(kilograms) == null) {
       return;
     }
 
@@ -356,8 +347,7 @@ class ChildGrowthGraphInputNotifier
         : ValidateTextFieldType.childKilogramsWeight.name;
 
     /// 保持している子どもの体重単位で適用させる体重入力コントローラー
-    final weightController =
-        WeightType.g == weightType ? gramsController : kilogramsController;
+    final weightController = WeightType.g == weightType ? gramsController : kilogramsController;
 
     return FormGroup({
       ValidateTextFieldType.date.name: dateController,

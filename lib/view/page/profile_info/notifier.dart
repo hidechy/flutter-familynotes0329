@@ -1,8 +1,8 @@
-import 'package:family_notes/extension/int.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../data/model/response/model.dart';
 import '../../../data/repository/profile.dart';
+import '../../../extension/int.dart';
 import '../../../provider/user/notifier.dart';
 import '../../../type/gender.dart';
 import '../../../util/util.dart';

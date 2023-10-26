@@ -1,9 +1,9 @@
-import 'package:family_notes/view/style/texts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '/data/repository/pregnant_weight_record.dart';
 import '/provider/child/notifier.dart';
 import '/util/util.dart';
+import '../../style/texts.dart';
 import 'state.dart';
 
 /// 体重グラフ画面の状態を管理するプロバイダー

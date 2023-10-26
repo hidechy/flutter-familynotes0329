@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:family_notes/view/style/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
@@ -17,6 +16,7 @@ import '../../component/plain_text_field/widget.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
 import '../../style/text_style.dart';
+import '../../style/texts.dart';
 import '../baby_birth_complete/widget.dart';
 import '../child_book_select/notifier.dart';
 import 'birth_tile/widget.dart';

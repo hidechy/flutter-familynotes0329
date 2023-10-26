@@ -1,6 +1,6 @@
-import 'package:family_notes/extension/date_time.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../extension/date_time.dart';
 import '../../../../util/util.dart';
 import '../../../component/ihs_button/type.dart';
 import '../../../component/ihs_button/widget.dart';
@@ -59,8 +59,7 @@ class LastQuestionButtonGroup extends StatelessWidget {
                     );
                     await Navigator.of(context).pushReplacement(
                       PageRouteBuilder(
-                        pageBuilder: (_, __, ___) =>
-                            LifeHabitQuestionResultPage(
+                        pageBuilder: (_, __, ___) => LifeHabitQuestionResultPage(
                           type: QuestionAnswerResultType.latest,
                           answerHeaderId: answerHeaderId,
                           date: DateTime.now().yyyymmdd,

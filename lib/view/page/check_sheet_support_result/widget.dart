@@ -1,17 +1,17 @@
-import 'package:family_notes/gen/assets.gen.dart';
-import 'package:family_notes/util/launch.dart';
-import 'package:family_notes/view/component/gradation_layout/widget.dart';
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../gen/assets.gen.dart';
+import '../../../util/launch.dart';
 import '../../../util/util.dart';
+import '../../component/gradation_layout/widget.dart';
 import '../../component/home_button/widget.dart';
+import '../../component/ihs_button/type.dart';
+import '../../component/ihs_button/widget.dart';
+import '../../style/colors.dart';
+import '../../style/text_style.dart';
 
 /// サポートチェックシート入力結果画面
 class CheckSheetSupportResultPage extends ConsumerWidget {

@@ -1,17 +1,15 @@
-import 'package:family_notes/data/model/response/model.dart';
-import 'package:family_notes/data/repository/life_habit_repository.dart';
-import 'package:family_notes/view/page/life_habit_question_result/state.dart';
-import 'package:family_notes/view/style/texts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../data/model/response/model.dart';
+import '../../../data/repository/life_habit_repository.dart';
 import '../../../util/util.dart';
+import '../../style/texts.dart';
+import 'state.dart';
 
 /// 設問回答結果画面状態プロバイダー
 final lifeHabitQuestionResultStateProvider =
-    AutoDisposeStateNotifierProvider.family<
-        LifeHabitQuestionResultStateNotifier,
-        LifeHabitQuestionResultState,
-        int>((ref, answerHeaderId) {
+    AutoDisposeStateNotifierProvider.family<LifeHabitQuestionResultStateNotifier, LifeHabitQuestionResultState, int>(
+        (ref, answerHeaderId) {
   return LifeHabitQuestionResultStateNotifier(
     answerHeaderid: answerHeaderId,
     ref: ref,
@@ -19,8 +17,7 @@ final lifeHabitQuestionResultStateProvider =
   );
 });
 
-class LifeHabitQuestionResultStateNotifier
-    extends StateNotifier<LifeHabitQuestionResultState> {
+class LifeHabitQuestionResultStateNotifier extends StateNotifier<LifeHabitQuestionResultState> {
   LifeHabitQuestionResultStateNotifier({
     required int answerHeaderid,
     required this.ref,

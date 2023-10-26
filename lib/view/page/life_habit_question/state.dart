@@ -1,6 +1,7 @@
-import 'package:family_notes/data/model/life_habit_question_list/model.dart';
-import 'package:family_notes/view/page/life_habit_question/question_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../data/model/life_habit_question_list/model.dart';
+import 'question_type.dart';
 
 part 'state.freezed.dart';
 

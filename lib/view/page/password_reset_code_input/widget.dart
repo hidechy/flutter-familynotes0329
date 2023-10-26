@@ -1,5 +1,3 @@
-import 'package:family_notes/view/page/password_reset_completed/widget.dart';
-import 'package:family_notes/view/page/root/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reactive_forms/reactive_forms.dart';
@@ -14,6 +12,8 @@ import '../../component/main_layout/widget.dart';
 import '../../component/validate_text_field/type.dart';
 import '../../component/validate_text_field/widget.dart';
 import '../../style/text_style.dart';
+import '../password_reset_completed/widget.dart';
+import '../root/widget.dart';
 import '../undeliverd_email/widget.dart';
 import 'notifier.dart';
 
@@ -43,8 +43,7 @@ class PasswordResetCodeInputPage extends ConsumerWidget {
         {
           ValidateTextFieldType.email.name: _authCodeController,
           ValidateTextFieldType.password.name: _passwordController,
-          ValidateTextFieldType.passwordConfirmation.name:
-              _passwordConfirmController,
+          ValidateTextFieldType.passwordConfirmation.name: _passwordConfirmController,
         },
         validators: [
           Validators.mustMatch(
@@ -155,8 +154,7 @@ class PasswordResetCodeInputPage extends ConsumerWidget {
                           email: email,
                           onSuccess: () {
                             // パスワード変更完了画面
-                            PageNavigator.navigatePage(
-                                context, const PasswordResetCompletedPage(),
+                            PageNavigator.navigatePage(context, const PasswordResetCompletedPage(),
                                 type: PageNavigator.typePushReplacement);
                           },
                           onFailure: (msg) {
@@ -183,12 +181,7 @@ class PasswordResetCodeInputPage extends ConsumerWidget {
                   notifier.onTappedCodeResend(
                     email: email,
                     onSuccess: () {
-                      IHSDialog(
-                              context: context,
-                              title: '認証コードを再送信しました。',
-                              okStr: '確認',
-                              onTap: (_) {})
-                          .showAlert();
+                      IHSDialog(context: context, title: '認証コードを再送信しました。', okStr: '確認', onTap: (_) {}).showAlert();
                     },
                     onFailure: (msg) {
                       IHSUtil.showSnackBar(msg: msg);
@@ -200,8 +193,7 @@ class PasswordResetCodeInputPage extends ConsumerWidget {
               IHSTextButton(
                 'メールが届かない場合はこちら',
                 onPressed: () {
-                  PageNavigator.navigatePage(
-                      context, const UndeliverdEmailPage());
+                  PageNavigator.navigatePage(context, const UndeliverdEmailPage());
                 },
               ),
               const SizedBox(height: 40),
@@ -214,7 +206,6 @@ class PasswordResetCodeInputPage extends ConsumerWidget {
 
   void _onTapCancel(BuildContext context) {
     // トップに戻る
-    PageNavigator.navigatePage(context, const RootPage(),
-        type: PageNavigator.typePushReplacement);
+    PageNavigator.navigatePage(context, const RootPage(), type: PageNavigator.typePushReplacement);
   }
 }

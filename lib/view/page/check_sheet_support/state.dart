@@ -1,6 +1,7 @@
-import 'package:family_notes/data/model/check_sheet_support_detail/model.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../data/model/check_sheet_support_detail/model.dart';
 
 part 'state.freezed.dart';
 

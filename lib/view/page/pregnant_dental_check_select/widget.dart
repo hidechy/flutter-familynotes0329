@@ -1,15 +1,15 @@
-import 'package:family_notes/view/component/gradation_layout/widget.dart';
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/page/pregnant_dental_check_select/notifier.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
+import '../../component/gradation_layout/widget.dart';
+import '../../component/ihs_button/type.dart';
+import '../../component/ihs_button/widget.dart';
 import '../../component/record_list/widget.dart';
+import '../../style/text_style.dart';
 import '../pregnant_dental_check_input/widget.dart';
+import 'notifier.dart';
 import 'type.dart';
 
 /// 妊婦歯科健診入力選択画面
@@ -74,8 +74,7 @@ class PregnantDentalCheckSelectPage extends ConsumerWidget {
                       _pushToDentalCheckInput(
                         context,
                         PregnantDentalCheckInputType.edit(
-                          motherDentalCheckupRecordId:
-                              records[index].motherDentalCheckupRecordId,
+                          motherDentalCheckupRecordId: records[index].motherDentalCheckupRecordId,
                         ),
                       );
                     },

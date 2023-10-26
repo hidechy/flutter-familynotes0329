@@ -1,13 +1,13 @@
-import 'package:family_notes/data/http/client.dart';
-import 'package:family_notes/data/model/life_habit_question_answer_history_list/model.dart';
-import 'package:family_notes/data/model/life_habit_question_answer_result_list/model.dart';
-import 'package:family_notes/data/model/life_habit_question_answer_save/model.dart';
-import 'package:family_notes/data/model/life_habit_question_list/model.dart';
-import 'package:family_notes/data/model/response/model.dart';
-import 'package:family_notes/data/request/life_habit_question_save/request.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../http/client.dart';
 import '../http/path.dart';
+import '../model/life_habit_question_answer_history_list/model.dart';
+import '../model/life_habit_question_answer_result_list/model.dart';
+import '../model/life_habit_question_answer_save/model.dart';
+import '../model/life_habit_question_list/model.dart';
+import '../model/response/model.dart';
+import '../request/life_habit_question_save/request.dart';
 
 final lifeHabitRepositoryProvider = Provider<LifeHabitRepositoryImpl>((ref) {
   final client = ref.read(httpClientProvider);

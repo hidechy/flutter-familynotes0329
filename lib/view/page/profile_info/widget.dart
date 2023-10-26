@@ -1,6 +1,3 @@
-import 'package:family_notes/extension/context.dart';
-import 'package:family_notes/extension/string.dart';
-import 'package:family_notes/type/gender.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,6 +7,9 @@ import '/view/component/ihs_button/widget.dart';
 import '/view/component/main_layout/widget.dart';
 import '/view/style/colors.dart';
 import '/view/style/text_style.dart';
+import '../../../extension/context.dart';
+import '../../../extension/string.dart';
+import '../../../type/gender.dart';
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
 import '../email_reset/widget.dart';

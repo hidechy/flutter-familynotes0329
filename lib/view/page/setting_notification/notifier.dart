@@ -1,8 +1,8 @@
-import 'package:family_notes/util/util.dart';
-import 'package:family_notes/view/style/texts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/data/repository/notification_settings.dart';
+import '../../../util/util.dart';
+import '../../style/texts.dart';
 import 'state.dart';
 
 /// 設定画面の状態を管理するプロバイダー

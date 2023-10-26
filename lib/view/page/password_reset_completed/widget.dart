@@ -1,9 +1,9 @@
-import 'package:family_notes/view/component/main_layout/widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../util/page_navigator.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
+import '../../component/main_layout/widget.dart';
 import '../../style/text_style.dart';
 import '../root/widget.dart';
 
@@ -36,8 +36,7 @@ class PasswordResetCompletedPage extends StatelessWidget {
             'ログインへ',
             type: IHSButtonType.primary,
             onPressed: () {
-              PageNavigator.navigatePage(context, const RootPage(),
-                  type: PageNavigator.typePushReplacement);
+              PageNavigator.navigatePage(context, const RootPage(), type: PageNavigator.typePushReplacement);
             },
           ),
         ],

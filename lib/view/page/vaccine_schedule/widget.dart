@@ -1,20 +1,20 @@
 import 'dart:async';
 
-import 'package:family_notes/data/local/local_client.dart';
-import 'package:family_notes/view/page/vaccine_schedule/state.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import './custom_tab_view/widget.dart';
 import './vaccine_list_tile/widget.dart';
+import '../../../data/local/local_client.dart';
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
 import '../../component/dot_line/dot_line.dart';
 import '../../component/gradation_layout/widget.dart';
+import '../../style/text_style.dart';
 import '../vaccine_done_input/widget.dart';
 import '../vaccine_schedule_input/widget.dart';
 import 'notifier.dart';
+import 'state.dart';
 import 'type.dart';
 
 class VaccineSchedulePage extends ConsumerStatefulWidget {

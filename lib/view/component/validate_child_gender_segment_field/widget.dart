@@ -1,10 +1,10 @@
-import 'package:family_notes/view/component/validate_text_field/child_gedner_type.dart';
 import 'package:flutter/material.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../type/gender.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import '../validate_text_field/child_gedner_type.dart';
 
 /// 子供の性別を選択するコンポーネント
 class ValidateChildGenderSegmentField extends ReactiveFormField {
@@ -20,9 +20,7 @@ class ValidateChildGenderSegmentField extends ReactiveFormField {
             String Function(Object)? validateMessage = (_) {
               return '';
             };
-            final value = state.control.value == null
-                ? null
-                : state.control.value as Gender;
+            final value = state.control.value == null ? null : state.control.value as Gender;
             final errors = state.control.errors;
             if (errors.isNotEmpty) {
               final key = state.control.errors.keys.toList().first;

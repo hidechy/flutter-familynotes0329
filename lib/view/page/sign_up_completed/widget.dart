@@ -1,10 +1,10 @@
-import 'package:family_notes/view/style/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../util/page_navigator.dart';
 import '../../component/ihs_button/type.dart';
 import '../../component/ihs_button/widget.dart';
 import '../../component/main_layout/widget.dart';
+import '../../style/colors.dart';
 import '../../style/text_style.dart';
 import '../profile_input/widget.dart';
 

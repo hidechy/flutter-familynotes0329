@@ -1,4 +1,4 @@
-import 'package:family_notes/gen/assets.gen.dart';
+import '../../../gen/assets.gen.dart';
 
 /// 設問回答結果画面の種類
 enum QuestionAnswerResultType {
@@ -11,16 +11,14 @@ enum QuestionAnswerResultType {
 
 enum OtherCommentType {
   stress(id: 1, label: 'ストレスをためない'),
-
   alcohol(id: 2, label: 'お酒を飲まない');
 
   const OtherCommentType({required this.id, required this.label});
+
   final int id;
   final String label;
 
-  static String getAssetName(int id) => OtherCommentType.values
-      .firstWhere((element) => element.id == id)
-      .assetName;
+  static String getAssetName(int id) => OtherCommentType.values.firstWhere((element) => element.id == id).assetName;
 }
 
 extension OtherCommentTypeEx on OtherCommentType {

@@ -1,15 +1,15 @@
-import 'package:family_notes/view/component/prefix_text/widget.dart';
-import 'package:family_notes/view/page/life_habit_question/last_question_button_group/widget.dart';
-import 'package:family_notes/view/page/life_habit_question/question_navigation_button_group/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../util/util.dart';
 import '../../component/gradation_layout/widget.dart';
+import '../../component/prefix_text/widget.dart';
 import '../../style/colors.dart';
 import '../../style/text_style.dart';
+import 'last_question_button_group/widget.dart';
 import 'notifier.dart';
+import 'question_navigation_button_group/widget.dart';
 import 'state.dart';
 
 /// 生活習慣設問画面

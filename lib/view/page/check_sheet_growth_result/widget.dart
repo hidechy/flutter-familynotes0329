@@ -1,17 +1,17 @@
-import 'package:family_notes/view/component/gradation_layout/widget.dart';
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/page/check_sheet_growth_result/notifier.dart';
-import 'package:family_notes/view/page/check_sheet_growth_result/type.dart';
-import 'package:family_notes/view/page/check_sheet_support/widget.dart';
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../util/page_navigator.dart';
 import '../../../util/util.dart';
+import '../../component/gradation_layout/widget.dart';
 import '../../component/home_button/widget.dart';
+import '../../component/ihs_button/type.dart';
+import '../../component/ihs_button/widget.dart';
+import '../../style/colors.dart';
+import '../../style/text_style.dart';
+import '../check_sheet_support/widget.dart';
+import 'notifier.dart';
+import 'type.dart';
 
 /// 発達チェックシート入力結果画面
 class CheckSheetGrowthResultPage extends ConsumerWidget {

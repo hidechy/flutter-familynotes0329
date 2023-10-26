@@ -1,13 +1,13 @@
-import 'package:family_notes/view/component/gradation_layout/widget.dart';
-import 'package:family_notes/view/component/home_button/widget.dart';
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/page/life_habit_question_result/state.dart';
-import 'package:family_notes/view/style/colors.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 
 import '../../../util/util.dart';
+import '../../component/gradation_layout/widget.dart';
+import '../../component/home_button/widget.dart';
+import '../../component/ihs_button/type.dart';
+import '../../component/ihs_button/widget.dart';
+import '../../style/colors.dart';
+import '../../style/text_style.dart';
+import '../life_habit_question_result/state.dart';
 
 /// 生活習慣設問回答結果、総合コメント画面
 class LifeHabitQuestionResultGeneralCommentPage extends StatelessWidget {

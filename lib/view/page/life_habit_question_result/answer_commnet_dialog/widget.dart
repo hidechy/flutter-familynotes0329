@@ -1,9 +1,9 @@
-import 'package:family_notes/view/component/ihs_button/type.dart';
-import 'package:family_notes/view/component/ihs_button/widget.dart';
-import 'package:family_notes/view/style/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../component/ihs_button/type.dart';
+import '../../../component/ihs_button/widget.dart';
+import '../../../style/text_style.dart';
 import '../state.dart';
 
 /// 回答に対してのコメント表示ダイアログ

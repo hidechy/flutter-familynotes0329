@@ -1,10 +1,10 @@
-import 'package:family_notes/data/request/profile_edit/request.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../http/client.dart';
 import '../http/path.dart';
 import '../model/profile/model.dart';
 import '../model/response/model.dart';
+import '../request/profile_edit/request.dart';
 
 /// プロフィール関連のRepository
 abstract class ProfileRepository {
